@@ -5,7 +5,7 @@ interface ModalProps {
   isVisible: boolean;
   children: React.ReactNode;
   onClose: () => void;
-  closeButton?: React.ReactNode | false;
+  closeButton?: React.ReactNode | null;
   animation?: 'scale' | 'translate' | 'none';
 }
 
@@ -32,7 +32,9 @@ export function Modal({
           className={`${styles.content} ${animationClass}`}
         >
           {children}
-          {closeButton ?? (
+          {closeButton !== undefined ? (
+            closeButton
+          ) : (
             <Dialog.Close
               onClick={onClose}
               className={styles.close}

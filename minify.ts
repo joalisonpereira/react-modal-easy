@@ -4,7 +4,7 @@ import { resolve, join } from 'node:path';
 import { stat, readdir } from 'node:fs/promises';
 import { filesize } from 'filesize';
 
-const file = resolve('./dist/', 'react-modal-easy.js');
+const file = resolve('./dist/', 'main.js');
 
 const dirSize = async (directory) => {
   const files = await readdir(directory);

@@ -14,7 +14,10 @@ export default defineConfig({
       formats: ['es']
     },
     rollupOptions: {
-      external: ['react', 'react/jsx-runtime']
+      external: ['react', 'react/jsx-runtime'],
+      output: {
+        entryFileNames: '[name].js'
+      }
     }
   }
 });
