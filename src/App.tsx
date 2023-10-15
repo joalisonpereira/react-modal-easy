@@ -7,12 +7,18 @@ function App() {
   return (
     <div>
       <button onClick={() => setIsVisible(!isVisible)}>Toggle</button>
-      <Modal isVisible={isVisible} onClose={() => setIsVisible(false)}>
-        <div style={{ width: 500, backgroundColor: 'white' }}>
-          Lorem ipsum dolor sit, amet consectetur adipisicing elit. Tempore
-          consequatur praesentium, aliquid ea magni quas, harum voluptate
-          commodi error earum culpa ex quibusdam tenetur! Saepe quaerat amet id
-          autem ratione!
+      <Modal
+        animation='scale'
+        isVisible={isVisible}
+        onClose={() => setIsVisible(false)}
+      >
+        <div style={{ background: 'white', padding: 20, borderRadius: 6 }}>
+          <Modal.Title>Hello Modal</Modal.Title>
+          <form>
+            <input placeholder='Email' />
+            <input placeholder='Password' />
+            <button>Enviar</button>
+          </form>
         </div>
       </Modal>
       {new Array(30).fill(null).map((_, index) => (
