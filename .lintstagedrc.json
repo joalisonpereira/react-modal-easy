@@ -1,3 +1,7 @@
 {
-  "{lib,src}/**/*.{ts,tsx}": ["eslint --fix", "npm run test:badges"]
+  "{lib,src}/**/*.{ts,tsx}": [
+    "eslint --fix",
+    "npm run test:badges",
+    "git add ."
+  ]
 }

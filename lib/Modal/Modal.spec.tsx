@@ -13,22 +13,6 @@ describe('Modal', () => {
     expect(sut.getByText('foo')).toBeVisible();
   });
 
-  test('should click default close button', () => {
-    const onCloseMock = vi.fn();
-
-    const sut = render(
-      <Modal isVisible={true} onClose={onCloseMock}>
-        foo
-      </Modal>
-    );
-
-    const closeButton = sut.getByLabelText('Close');
-
-    closeButton.click();
-
-    expect(onCloseMock).toBeCalledTimes(1);
-  });
-
   test('should click custom close button', () => {
     const onCloseMock = vi.fn();
 
@@ -47,6 +31,22 @@ describe('Modal', () => {
     );
 
     const closeButton = sut.getByLabelText('Fechar');
+
+    closeButton.click();
+
+    expect(onCloseMock).toBeCalledTimes(1);
+  });
+
+  test('should click default close button', () => {
+    const onCloseMock = vi.fn();
+
+    const sut = render(
+      <Modal isVisible={true} onClose={onCloseMock}>
+        foo
+      </Modal>
+    );
+
+    const closeButton = sut.getByLabelText('Close');
 
     closeButton.click();
 
