@@ -1,4 +1,3 @@
 {
-  "lib/*.ts": "eslint --fix",
-  "lib/*.tsx": "eslint --fix"
+  "lib/*.{ts,tsx}": "eslint --fix && npm run test:badges"
 }
