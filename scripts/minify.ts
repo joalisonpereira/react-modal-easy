@@ -25,7 +25,7 @@ minify({
     if (!err) {
       const sizeInBytes = await dirSize(resolve('./dist/'));
 
-      console.log(`Final size: ${filesize(sizeInBytes, { standard: 'si' })}`);
+      console.log(`Package size: ${filesize(sizeInBytes, { standard: 'si' })}`);
     }
   }
 });

@@ -3,8 +3,8 @@
   --react-modal-easy-animations-duration: 200ms;
 }
 
+/* Base */
 .overlay {
-  background-color: var(--react-modal-easy-overlay);
   position: fixed;
   inset: 0;
   animation: overlayShow var(--react-modal-easy-animations-duration)
@@ -27,6 +27,22 @@
   transform: translate(-50%, -50%);
 }
 
+.close {
+  border: none;
+  margin: 0;
+  padding: 0;
+  background-color: transparent;
+  cursor: pointer;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  cursor: pointer;
+  position: absolute;
+  top: 16px;
+  right: 16px;
+}
+
+/* Content animations */
 .translateAnimation {
   animation: translateShow var(--react-modal-easy-animations-duration)
     cubic-bezier(0.16, 1, 0.3, 1);
@@ -43,7 +59,7 @@
   }
 }
 
-.animationScale {
+.scaleAnimation {
   animation: scaleShow var(--react-modal-easy-animations-duration)
     cubic-bezier(0.16, 1, 0.3, 1);
 }
@@ -57,19 +73,4 @@
     opacity: 1;
     transform: translate(-50%, -50%) scale(1);
   }
-}
-
-.close {
-  border: none;
-  margin: 0;
-  padding: 0;
-  background-color: transparent;
-  cursor: pointer;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  cursor: pointer;
-  position: absolute;
-  top: 16px;
-  right: 16px;
 }

@@ -6,7 +6,9 @@ function App() {
 
   return (
     <div>
-      <button onClick={() => setIsVisible(!isVisible)}>Toggle</button>
+      <button onClick={() => setIsVisible(!isVisible)}>
+        {isVisible ? 'Close' : 'Open'}
+      </button>
       <Modal
         animation='scale'
         isVisible={isVisible}
@@ -21,17 +23,6 @@ function App() {
           </form>
         </div>
       </Modal>
-      {new Array(30).fill(null).map((_, index) => (
-        <p className='mt-10' key={index}>
-          <b>{index}</b> - Lorem ipsum dolor sit amet consectetur adipisicing
-          elit. Cumque dicta illum consectetur accusantium suscipit deleniti
-          natus ipsum, maiores magnam magni quae ad sint eum dignissimos
-          cupiditate, perspiciatis quam id. Ratione. Lorem ipsum dolor sit amet
-          consectetur adipisicing elit. Cumque dicta illum consectetur
-          accusantium suscipit deleniti natus ipsum, maiores magnam magni quae
-          ad sint eum dignissimos cupiditate, perspiciatis quam id. Ratione.
-        </p>
-      ))}
     </div>
   );
 }
