@@ -1,0 +1,4 @@
+{
+  "lib/*.ts": "eslint --fix",
+  "lib/*.tsx": "eslint --fix"
+}
