@@ -1,6 +1,6 @@
-import * as Dialog from "@radix-ui/react-dialog";
-import styles from "./Modal.module.css";
-import { CloseIcon } from "./CloseIcon";
+import * as Dialog from '@radix-ui/react-dialog';
+import styles from './Modal.module.css';
+import { CloseIcon } from './CloseIcon';
 
 interface ModalProps {
   isVisible: boolean;
@@ -19,7 +19,7 @@ export function Modal({ isVisible, children, onClose }: ModalProps) {
             <button
               onClick={onClose}
               className={styles.closeBtn}
-              aria-label="Fechar"
+              aria-label='Fechar'
             >
               <CloseIcon />
             </button>
