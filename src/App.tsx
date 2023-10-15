@@ -15,7 +15,7 @@ function App() {
         onClose={() => setIsVisible(false)}
       >
         <div style={{ background: 'white', padding: 20, borderRadius: 6 }}>
-          <Modal.Title>Hello Modal</Modal.Title>
+          <Modal.Title>Hello Easy Modal</Modal.Title>
           <form>
             <input placeholder='Email' />
             <input placeholder='Password' />
