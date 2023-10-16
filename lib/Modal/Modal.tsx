@@ -1,4 +1,5 @@
 import * as Dialog from '@radix-ui/react-dialog';
+import clsx from 'clsx';
 import styles from './Modal.module.css';
 
 export interface ModalProps {
@@ -7,7 +8,8 @@ export interface ModalProps {
   onClose: () => void;
   animation?: 'scale' | 'translate' | 'none';
   closeButton?: React.ReactNode;
-  overlayColor?: string;
+  className?: string;
+  overlayClassName?: string;
 }
 
 export function Modal({
@@ -15,7 +17,8 @@ export function Modal({
   children,
   onClose,
   closeButton,
-  overlayColor = 'var(--react-modal-easy-overlay)',
+  className,
+  overlayClassName,
   animation = 'scale'
 }: ModalProps) {
   const animationClass = {
@@ -27,14 +30,11 @@ export function Modal({
   return (
     <Dialog.Root open={isVisible}>
       <Dialog.Portal>
-        <Dialog.Overlay
-          className={styles.overlay}
-          style={{ backgroundColor: overlayColor }}
-        />
+        <Dialog.Overlay className={clsx(styles.overlay, overlayClassName)} />
         <Dialog.Content
           onInteractOutside={onClose}
           onEscapeKeyDown={onClose}
-          className={`${styles.content} ${animationClass}`}
+          className={clsx(styles.content, animationClass, className)}
         >
           {children}
           {closeButton !== undefined ? (

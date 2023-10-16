@@ -4,7 +4,7 @@
 
 ![](./docs/badge-statements.svg) ![](./docs/badge-functions.svg) ![](./docs/badge-lines.svg) ![](./docs/badge-branches.svg)
 
-[license-url]: https://opensource.org/licenses/MIT
+The purpose of this component is to provide a simple interface. You won't find predefined styles to cause you problems or unnecessary customizations.
 
 ## Install
 
@@ -13,8 +13,6 @@ npm i react-modal-easy
 ```
 
 ## Usage
-
-The purpose of this component is to provide a simple interface. You won't find predefined styles to cause you problems or unnecessary customizations for everyday use.
 
 ```tsx
 // include styles
@@ -61,13 +59,14 @@ return (
 
 ## Props
 
-| Property     | Type                           | Default            | Description                             |
-| ------------ | ------------------------------ | ------------------ | --------------------------------------- |
-| isVisible    | boolean                        |                    | whether to show dialog                  |
-| onClose      | func                           |                    | handler called onClose of modal         |
-| closeButton  | React.ReactNode                | default close      | close component, use `null` to disable. |
-| overlayColor | string                         | rgba(0, 0, 0, 0.4) | overlay background color                |
-| animation    | 'scale' , 'translate' , 'none' | scale              | animation type                          |
+| Property          | Type                           | Default   | Description                             |
+| ----------------- | ------------------------------ | --------- | --------------------------------------- |
+| isVisible         | boolean                        |           | whether to show dialog                  |
+| onClose           | function                       |           | handler called onClose of modal         |
+| closeButton?      | React.ReactNode                | Component | close component, use `null` to disable. |
+| className?        | string                         |           | modal component class                   |
+| overlayClassName? | string                         |           | overlay component class                 |
+| animation?        | 'scale' , 'translate' , 'none' | scale     | animation type                          |
 
 ## Components
 

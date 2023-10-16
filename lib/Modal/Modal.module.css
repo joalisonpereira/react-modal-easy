@@ -5,6 +5,7 @@
 
 /* Base */
 .overlay {
+  background-color: var(--react-modal-easy-overlay);
   position: fixed;
   inset: 0;
   animation: overlayShow var(--react-modal-easy-animations-duration)
