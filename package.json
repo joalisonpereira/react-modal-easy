@@ -27,9 +27,6 @@
   "files": [
     "dist"
   ],
-  "sideEffects": [
-    "**/*.css"
-  ],
   "type": "module",
   "scripts": {
     "dev": "vite",
@@ -48,6 +45,8 @@
     "react-dom": "^18.2.0"
   },
   "devDependencies": {
+    "react": "^18.2.0",
+    "react-dom": "^18.2.0",
     "@commitlint/cli": "^17.8.0",
     "@commitlint/config-conventional": "^17.8.0",
     "@node-minify/core": "^8.0.6",
