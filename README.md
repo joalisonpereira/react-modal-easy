@@ -17,6 +17,9 @@ npm i react-modal-easy
 The purpose of this component is to provide a simple interface. You won't find predefined styles to cause you problems or unnecessary customizations for everyday use.
 
 ```tsx
+// include styles
+import 'react-modal-easy/dist/style.css';
+
 const [visible, setVisible] = useState(false);
 
 return (
