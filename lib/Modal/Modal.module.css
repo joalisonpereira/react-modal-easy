@@ -43,7 +43,7 @@
   right: 16px;
 }
 
-/* Content animations */
+/* Animations */
 .translateAnimation {
   animation: translateShow var(--react-modal-easy-animations-duration)
     cubic-bezier(0.16, 1, 0.3, 1);
