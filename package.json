@@ -1,6 +1,7 @@
 {
   "name": "react-modal-easy",
-  "version": "0.0.1",
+  "description": "Simple modal with good accessibility",
+  "version": "0.0.2",
   "author": {
     "email": "joalison.pereira@hotmail.com",
     "name": "joalisonpereira",
@@ -13,6 +14,14 @@
   "bugs": {
     "url": "https://github.com/joalisonpereira/react-modal-easy/issues"
   },
+  "homepage": "https://github.com/joalisonpereira/react-modal-easy",
+  "keywords": [
+    "modal",
+    "react",
+    "dialog",
+    "react-component",
+    "accessibility"
+  ],
   "main": "dist/main.js",
   "types": "dist/main.d.ts",
   "files": [
