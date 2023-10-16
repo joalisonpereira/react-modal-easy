@@ -34,7 +34,7 @@ return (
 
 ![](./docs/usage1.png)
 
-#### Acessibility
+### Acessibility
 
 By internally using the [Radix Dialog](https://www.radix-ui.com/primitives/docs/components/dialog), this component comes with accessibility configurations by default. However, for the best use of this feature, also utilize the `Title`, `Description` and `Close` components.
 
