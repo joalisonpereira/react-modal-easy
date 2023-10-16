@@ -1,11 +1,17 @@
 {
   "name": "react-modal-easy",
-  "private": true,
   "version": "0.0.1",
   "author": {
     "email": "joalison.pereira@hotmail.com",
     "name": "joalisonpereira",
     "url": "https://joalisonpereira.dev"
+  },
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/joalisonpereira/react-modal-easy.git"
+  },
+  "bugs": {
+    "url": "https://github.com/joalisonpereira/react-modal-easy/issues"
   },
   "main": "dist/main.js",
   "types": "dist/main.d.ts",
