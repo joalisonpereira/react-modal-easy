@@ -44,7 +44,7 @@ return (
     onClose={onClose}
     closeButton={
       <Modal.Close onClick={onClose} aria-label='Close'>
-        Fechar
+        X
       </Modal.Close>
     }
   >
@@ -63,10 +63,10 @@ return (
 | ----------------- | ------------------------------ | --------- | --------------------------------------- |
 | isVisible         | boolean                        |           | whether to show dialog                  |
 | onClose           | function                       |           | handler called onClose of modal         |
+| animation?        | 'scale' , 'translate' , 'none' | scale     | animation type                          |
 | closeButton?      | React.ReactNode                | Component | close component, use `null` to disable. |
 | className?        | string                         |           | modal component class                   |
 | overlayClassName? | string                         |           | overlay component class                 |
-| animation?        | 'scale' , 'translate' , 'none' | scale     | animation type                          |
 
 ## Components
 
