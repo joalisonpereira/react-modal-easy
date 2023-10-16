@@ -1,27 +1,75 @@
-# React + TypeScript + Vite
+# React Modal Easy
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+> Simple modal with good accessibility
 
-Currently, two official plugins are available:
+![](./docs/badge-statements.svg) ![](./docs/badge-functions.svg) ![](./docs/badge-lines.svg) ![](./docs/badge-branches.svg)
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react/README.md) uses [Babel](https://babeljs.io/) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
+[license-url]: https://opensource.org/licenses/MIT
 
-## Expanding the ESLint configuration
+## Install
 
-If you are developing a production application, we recommend updating the configuration to enable type aware lint rules:
-
-- Configure the top-level `parserOptions` property like this:
-
-```js
-   parserOptions: {
-    ecmaVersion: 'latest',
-    sourceType: 'module',
-    project: ['./tsconfig.json', './tsconfig.node.json'],
-    tsconfigRootDir: __dirname,
-   },
+```bash
+npm i react-modal-easy
 ```
 
-- Replace `plugin:@typescript-eslint/recommended` to `plugin:@typescript-eslint/recommended-type-checked` or `plugin:@typescript-eslint/strict-type-checked`
-- Optionally add `plugin:@typescript-eslint/stylistic-type-checked`
-- Install [eslint-plugin-react](https://github.com/jsx-eslint/eslint-plugin-react) and add `plugin:react/recommended` & `plugin:react/jsx-runtime` to the `extends` list
+## Usage
+
+The purpose of this component is to provide a simple interface. You won't find predefined styles to cause you problems or unnecessary customizations for everyday use.
+
+```tsx
+const [visible, setVisible] = useState(false);
+
+return (
+  <Modal isVisible={visible} onClose={() => setVisible(false)}>
+    <div style={{ backgroundColor: 'white', width: 500, padding: 20 }}>
+      <Modal.Title>React Modal Easy</Modal.Title>
+      ...
+    </div>
+  </Modal>
+);
+```
+
+![](./docs/usage1.png)
+
+#### Acessibility
+
+By internally using the [Radix Dialog](https://www.radix-ui.com/primitives/docs/components/dialog), this component comes with accessibility configurations by default. However, for the best use of this feature, also utilize the `Title`, `Description` and `Close` components.
+
+```tsx
+...
+return (
+  <Modal
+    isVisible={visible}
+    onClose={onClose}
+    closeButton={
+      <Modal.Close onClick={onClose} aria-label='Close'>
+        Fechar
+      </Modal.Close>
+    }
+  >
+    <Modal.Title>Lorem Ipsum is simply</Modal.Title>
+    <Modal.Description>
+      Lorem Ipsum is simply dummy text of the printing and typesetting industry.
+    </Modal.Description>
+    ...
+  </Modal>
+);
+```
+
+## Props
+
+| Property     | Type                           | Default            | Description                             |
+| ------------ | ------------------------------ | ------------------ | --------------------------------------- |
+| isVisible    | boolean                        |                    | whether to show dialog                  |
+| onClose      | func                           |                    | handler called onClose of modal         |
+| closeButton  | React.ReactNode                | default close      | close component, use `null` to disable. |
+| overlayColor | string                         | rgba(0, 0, 0, 0.4) | overlay background color                |
+| animation    | 'scale' , 'translate' , 'none' | scale              | animation type                          |
+
+## Components
+
+| Name                                                                                        | Description                                                                   |
+| ------------------------------------------------------------------------------------------- | ----------------------------------------------------------------------------- |
+| [Modal.Title](https://www.radix-ui.com/primitives/docs/components/dialog#title)             | An accessible title to be announced when the dialog is opened.                |
+| [Modal.Description](https://www.radix-ui.com/primitives/docs/components/dialog#description) | An optional accessible description to be announced when the dialog is opened. |
+| [Modal.Close](https://www.radix-ui.com/primitives/docs/components/dialog#close)             | The button that closes the dialog.                                            |

@@ -2,25 +2,27 @@ import { useState } from 'react';
 import { Modal } from '../lib/Modal';
 
 function App() {
-  const [isVisible, setIsVisible] = useState(false);
+  const [visible, setVisible] = useState(false);
+
+  const onClose = () => setVisible(false);
 
   return (
-    <div>
-      <button onClick={() => setIsVisible(!isVisible)}>
-        {isVisible ? 'Close' : 'Open'}
-      </button>
+    <div style={{ backgroundColor: 'red' }}>
       <Modal
-        animation='scale'
-        isVisible={isVisible}
-        onClose={() => setIsVisible(false)}
+        isVisible={visible}
+        onClose={onClose}
+        closeButton={
+          <Modal.Close onClick={onClose} aria-label='Close'>
+            Fechar
+          </Modal.Close>
+        }
       >
-        <div style={{ background: 'white', padding: 20, borderRadius: 6 }}>
-          <Modal.Title>Hello Modal Easy</Modal.Title>
-          <form>
-            <input placeholder='Email' />
-            <input placeholder='Password' />
-            <button>Enviar</button>
-          </form>
+        <div style={{ backgroundColor: 'red' }}>
+          <Modal.Title>Lorem Ipsum is simply</Modal.Title>
+          <Modal.Description>
+            Lorem Ipsum is simply dummy text of the printing and typesetting
+            industry.
+          </Modal.Description>
         </div>
       </Modal>
     </div>
