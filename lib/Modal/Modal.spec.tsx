@@ -3,14 +3,14 @@ import { render } from '@testing-library/react';
 import { Modal } from '.';
 
 describe('Modal', () => {
-  test('should show children', () => {
+  test('should show children', async () => {
     const sut = render(
-      <Modal isVisible={true} onClose={vi.fn()}>
+      <Modal title={String(Math.random())} isVisible={true} onClose={vi.fn()}>
         foo
       </Modal>
     );
 
-    expect(sut.getByText('foo')).toBeVisible();
+    expect(await sut.findByText('foo')).toBeVisible();
   });
 
   test('should click custom close button', () => {
@@ -20,6 +20,7 @@ describe('Modal', () => {
       <Modal
         isVisible={true}
         onClose={onCloseMock}
+        title={<Modal.Title>aosdkad</Modal.Title>}
         closeButton={
           <Modal.Close onClick={onCloseMock} aria-label='Fechar'>
             Fechar
@@ -41,7 +42,11 @@ describe('Modal', () => {
     const onCloseMock = vi.fn();
 
     const sut = render(
-      <Modal isVisible={true} onClose={onCloseMock}>
+      <Modal
+        title={String(Math.random())}
+        isVisible={true}
+        onClose={onCloseMock}
+      >
         foo
       </Modal>
     );

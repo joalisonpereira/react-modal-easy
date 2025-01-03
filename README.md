@@ -59,14 +59,15 @@ return (
 
 ## Props
 
-| Property          | Type                           | Default   | Description                             |
-| ----------------- | ------------------------------ | --------- | --------------------------------------- |
-| isVisible         | boolean                        |           | whether to show dialog                  |
-| onClose           | function                       |           | handler called onClose of modal         |
-| animation?        | 'scale' , 'translate' , 'none' | scale     | animation type                          |
-| closeButton?      | React.ReactNode                | Component | close component, use `null` to disable. |
-| className?        | string                         |           | modal component class                   |
-| overlayClassName? | string                         |           | overlay component class                 |
+| Property          | Type                           | Default   | Description                                               |
+| ----------------- | ------------------------------ | --------- | --------------------------------------------------------- |
+| isVisible         | boolean                        |           | whether to show dialog                                    |
+| onClose           | function                       |           | handler called onClose of modal                           |
+| animation?        | 'scale' , 'translate' , 'none' | scale     | animation type                                            |
+| closeButton?      | React.ReactNode                | Component | close component, use `null` to disable.                   |
+| className?        | string                         |           | modal component class                                     |
+| overlayClassName? | string                         |           | overlay component class                                   |
+| title?            | string                         |           | used for accessibility. with a string, it will be hidden. |
 
 ## Components
 

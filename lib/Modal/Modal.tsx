@@ -1,6 +1,7 @@
 import * as Dialog from '@radix-ui/react-dialog';
 import clsx from 'clsx';
 import styles from './Modal.module.css';
+import { VisuallyHidden } from '@radix-ui/react-visually-hidden';
 
 export interface ModalProps {
   isVisible: boolean;
@@ -10,6 +11,7 @@ export interface ModalProps {
   closeButton?: React.ReactNode;
   className?: string;
   overlayClassName?: string;
+  title: string | React.ReactNode;
 }
 
 export function Modal({
@@ -19,6 +21,7 @@ export function Modal({
   closeButton,
   className,
   overlayClassName,
+  title,
   animation = 'scale'
 }: ModalProps) {
   const animationClass = {
@@ -32,10 +35,19 @@ export function Modal({
       <Dialog.Portal>
         <Dialog.Overlay className={clsx(styles.overlay, overlayClassName)} />
         <Dialog.Content
+          aria-describedby={undefined}
           onInteractOutside={onClose}
           onEscapeKeyDown={onClose}
           className={clsx(styles.content, animationClass, className)}
         >
+          {typeof title === 'string' ? (
+            <VisuallyHidden asChild>
+              <Dialog.Title>{title}</Dialog.Title>
+            </VisuallyHidden>
+          ) : (
+            title
+          )}
+
           {children}
           {closeButton !== undefined ? (
             closeButton
