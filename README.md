@@ -67,7 +67,7 @@ return (
 | closeButton?      | React.ReactNode                | Component | close component, use `null` to disable.                   |
 | className?        | string                         |           | modal component class                                     |
 | overlayClassName? | string                         |           | overlay component class                                   |
-| title?            | string                         |           | used for accessibility. with a string, it will be hidden. |
+| title             | string                         |           | used for accessibility. with a string, it will be hidden. |
 
 ## Components
 
