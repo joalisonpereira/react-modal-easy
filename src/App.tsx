@@ -2,7 +2,7 @@ import { useState } from 'react';
 import { Modal } from '../lib/Modal';
 
 function App() {
-  const [visible, setVisible] = useState(false);
+  const [visible, setVisible] = useState(true);
 
   const onClose = () => setVisible(false);
 

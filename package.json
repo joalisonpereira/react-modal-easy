@@ -41,8 +41,8 @@
     "test:badges": "npm run test:coverage && jest-coverage-badges input \"./coverage/coverage-summary.json\" output \"./docs/\""
   },
   "peerDependencies": {
-    "react": "^18.2.0",
-    "react-dom": "^18.2.0"
+    "react": "^19.0.0",
+    "react-dom": "^19.0.0"
   },
   "devDependencies": {
     "@commitlint/cli": "^17.8.0",
@@ -50,10 +50,10 @@
     "@node-minify/core": "^8.0.6",
     "@node-minify/uglify-js": "^8.0.6",
     "@testing-library/jest-dom": "^6.1.4",
-    "@testing-library/react": "^14.0.0",
+    "@testing-library/react": "^16.1.0",
     "@types/node": "^20.8.6",
-    "@types/react": "^18.2.15",
-    "@types/react-dom": "^18.2.7",
+    "@types/react": "^19.0.2",
+    "@types/react-dom": "^19.0.2",
     "@typescript-eslint/eslint-plugin": "^6.0.0",
     "@typescript-eslint/parser": "^6.0.0",
     "@vitejs/plugin-react": "^4.1.0",
@@ -69,8 +69,8 @@
     "jsdom": "^22.1.0",
     "lint-staged": "^15.0.0",
     "prettier": "^3.0.3",
-    "react": "^18.2.0",
-    "react-dom": "^18.2.0",
+    "react": "^19.0.0",
+    "react-dom": "^19.0.0",
     "tsx": "^3.13.0",
     "typescript": "^5.0.2",
     "vite": "^4.4.5",
@@ -78,7 +78,7 @@
     "vitest": "^0.34.6"
   },
   "dependencies": {
-    "@radix-ui/react-dialog": "^1.0.5",
+    "@radix-ui/react-dialog": "^1.1.4",
     "clsx": "^2.0.0"
   },
   "license": "MIT"
