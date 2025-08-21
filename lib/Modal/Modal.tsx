@@ -11,7 +11,7 @@ export interface ModalProps {
   closeButton?: React.ReactNode;
   className?: string;
   overlayClassName?: string;
-  title: string | React.ReactNode;
+  title?: string | React.ReactNode;
 }
 
 export function Modal({
@@ -33,10 +33,13 @@ export function Modal({
   return (
     <Dialog.Root open={isVisible}>
       <Dialog.Portal>
-        <Dialog.Overlay className={clsx(styles.overlay, overlayClassName)} />
+        <Dialog.Overlay
+          className={clsx(styles.overlay, overlayClassName)}
+          onClick={onClose}
+        />
         <Dialog.Content
           aria-describedby={undefined}
-          onInteractOutside={onClose}
+          onInteractOutside={(e) => e.preventDefault()}
           onEscapeKeyDown={onClose}
           className={clsx(styles.content, animationClass, className)}
         >
